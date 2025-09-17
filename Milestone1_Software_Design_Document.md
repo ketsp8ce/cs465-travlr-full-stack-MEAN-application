@@ -7,6 +7,10 @@
 # This milestone is intended for you to begin preparing the design documentation needed to deliver to your client, Travlr Getaways. Specifically, you will provide a high-level overview, a description of the design constraints, and a diagram that demonstrates the architecture of the web app. Keep your audience in mind and be sure to communicate clearly and concisely in client-facing documentation. Complete the following sections of the Software Design Document for your client:
 
 # Executive Summary: An executive summary is used to introduce the software design problem and present a solution. Be sure to provide the client with any critical information they must know in order to proceed with the process you are proposing. It will be essential to address the following in the Executive Summary section of the SDD:
+The goal of the project is to create a secure and scaleable full-stack booking and marketing platform for Travlr Getaways. This will be achieved using the MEAN stack to create a dual client, single API architecture.
+Two applications will be created- a customer facing website and an administer Single Page Application (SPA). Angular will be used to build these two sites. 
+To create the backend, I will use Node.js and Express to build a RESTful API (JSON) that implements bussiness logic, validates requests, etc.
+I will use mongoDB, which has a document database model, to create a felxible schema to store booking and user information.
 
 
 # Design Constraints: Building an application has constraints. These constraints are things that provide boundaries or guardrails for the project and naturally come with limitations. Be sure to address the following in the Design Constraints section of the SDD:
