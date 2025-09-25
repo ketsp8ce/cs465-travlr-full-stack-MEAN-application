@@ -11,12 +11,11 @@ var travelRouter = require('./app_server/routes/travel');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'hbs');
 
 //register handlebars partials
-
-handlebars.registerPartials(__dirname + '/views/partials');
+handlebars.registerPartials(__dirname + '/app_server/views/partials');
 
 app.use(logger('dev'));
 app.use(express.json());
