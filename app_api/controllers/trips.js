@@ -8,6 +8,27 @@ const Model = mongoose.model('trips');
 const tripslist = async (req, res) => {
 
         const q = await Model
+        .find({}) // Return single record
+        .exec();
+
+        console.log(q);
+
+        if(!q)
+        { // database returned no data
+            return res
+            .status(404) // 404 Not Found
+            .json(err);
+        } else { // return resulting trip list
+            return res
+            .status(200) 
+            .json(q);
+        }
+        
+    };
+
+    const tripsFindByCode = async (req, res) => {
+
+        const q = await Model
         .find({'code' : req.params.tripCode }) // Return single record
         .exec();
 
@@ -30,6 +51,7 @@ const tripslist = async (req, res) => {
     module.exports =  {
         tripslist,
         tripsFindByCode
+
     };
 
 
