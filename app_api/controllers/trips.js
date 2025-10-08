@@ -8,7 +8,7 @@ const Model = mongoose.model('trips');
 const tripslist = async (req, res) => {
 
         const q = await Model
-        .find({}) // no filter, return all records
+        .find({'code' : req.params.tripCode }) // Return single record
         .exec();
 
         console.log(q);
@@ -28,8 +28,8 @@ const tripslist = async (req, res) => {
 
 
     module.exports =  {
-        tripslist 
-
+        tripslist,
+        tripsFindByCode
     };
 
 
