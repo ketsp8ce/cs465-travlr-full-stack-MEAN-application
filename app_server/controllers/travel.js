@@ -16,7 +16,7 @@ const travel = async function (req, res, next) {
         .then(json => {
             res.render('travel', { title: 'Travlr Gateways', trips: json, message});
         })
-    catch((err) -> res.status(500).send(err.message));
+    .catch((err) => res.status(500).send(err.message));
 };
 
 module.exports = {
